@@ -8,7 +8,9 @@ body {
 }
 
 .main_title {
+    margin-top: 0;
     color:#123c69;
+    font-size: 2.5rem;
 }
 
 .container {
@@ -17,6 +19,7 @@ body {
 }
 
 .sidebar {
+    margin-top: 0;
     width: 150px;
     background-color: #685b60;
     color: white;
@@ -25,7 +28,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     height: 100vh;
-    box-sizing: border-box + 20p;
+    box-sizing: border-box + 20px;
 }
 
 .sidebar h1 {
@@ -67,14 +70,17 @@ body {
 .button {
     display: inline-block;
     margin-top: 1rem;
+    margin-right: 3rem;
     padding: 0.5rem 1rem;
     text-decoration: none;
     color: white;
     border-radius: 5px;
+    width: 300px;
+    height: 28vh;
 }
 
-.red { background-color: #ac3b61; }
-.blue { background-color: #123c69; }
+.page1 { background-color: #ac3b61; }
+.page2 { background-color: #123c69; }
 
-.red-border { border: 2px solid #ac3b61; }
-.blue-border { border: 2px solid #123c69; }
+.page1-border { border: 2px solid #ac3b61; }
+.page2-border { border: 2px solid #123c69; }
