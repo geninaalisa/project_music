@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h2 class = "main_title">Название</h2>
+    <p>Описание проекта</p>
+    <div class="links">
+        <a href="{{ url_for('page1') }}" class="button red">Ссылка на Страницу 1</a>
+        <a href="{{ url_for('page2') }}" class="button blue">Ссылка на Страницу 2</a>
+    </div>
+</div>
+{% endblock %}
