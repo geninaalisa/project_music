@@ -32,7 +32,7 @@ body {
 }
 
 .sidebar h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background-color: #5e5a5e;
+    background-color: #3b3437;
 }
 
 .content, .page-content {
@@ -67,8 +67,13 @@ body {
     border-radius: 5px;
 }
 
+.links {
+    display: flex;
+}
+
 .button {
     display: inline-block;
+    text-align: center;
     margin-top: 1rem;
     margin-right: 3rem;
     padding: 0.5rem 1rem;
@@ -80,7 +85,9 @@ body {
 }
 
 .page1 { background-color: #ac3b61; }
+.page1:hover { background-color: #c9567c;}
 .page2 { background-color: #123c69; }
+.page2:hover { background-color: #26588e;}
 
 .page1-border { border: 2px solid #ac3b61; }
 .page2-border { border: 2px solid #123c69; }
