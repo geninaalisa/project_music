@@ -71,7 +71,7 @@ body {
     display: flex;
 }
 
-.button {
+.button-home {
     display: inline-block;
     text-align: center;
     margin-top: 1rem;
@@ -84,6 +84,12 @@ body {
     height: 28vh;
 }
 
+.button-page1 {
+    font-family: Comic Sans MS, cursive;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
 .page1 { background-color: #ac3b61; }
 .page1:hover { background-color: #c9567c;}
 .page2 { background-color: #123c69; }
@@ -91,3 +97,21 @@ body {
 
 .page1-border { border: 2px solid #ac3b61; }
 .page2-border { border: 2px solid #123c69; }
+
+.styled-textarea {
+    width: 50vw;
+    height: 30vh;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    outline: none;
+    resize: vertical;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+.styled-textarea:hover, 
+.styled-textarea:focus {
+    border-color: #ac3b61;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
