@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}Страница 1{% endblock %}
+{% block title %}Цифровой проигрыватель{% endblock %}
 
 {% block content %}
-<div class="page-content red-border">
-    <h2>Страница 1</h2>
-    <input type="text" placeholder="Ввод текста">
+<div>
+    <h2 class="main_title">Цифровой проигрыватель</h2>
+    <form action="{{ url_for('process_text') }}" method="POST">
+        <textarea class= "styled-textarea" name="notes_input"  placeholder="Ввод текста нот..."></textarea>
+        <button type="submit" class="button-page1 page1">Отправить</button>
+    </form>
+
+    {% if notes_input %}
+        <h3>Вы ввели: </h3>
+        <p>{{notes_input}}</p>
+    {% endif %}
     <p>Описание страницы</p>
 </div>
 {% endblock %}
