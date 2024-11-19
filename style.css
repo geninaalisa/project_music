@@ -1,5 +1,5 @@
 body {
-    font-family: Comic Sans MS, cursive;
+    font-family: 'Comic Sans MS', cursive;
     font-weight: 100;
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100vh;
+    height: 150vh;
     box-sizing: border-box + 20px;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 .button-page1 {
-    font-family: Comic Sans MS, cursive;
+    font-family: 'Comic Sans MS', cursive;
     border-radius: 5px;
     color: #ffffff;
 }
@@ -114,4 +114,14 @@ body {
 .styled-textarea:focus {
     border-color: #ac3b61;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.note-example {
+    background-color: #f8f2f0;
+    border: 1px solid #ddd1d4;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-family: 'Corier New', Courier, monospace;
+    color: #333;
+    font-weight: bold;
 }
