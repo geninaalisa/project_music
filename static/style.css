@@ -1,0 +1,164 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    background-color: #eee2dc;
+    height: 100vh;
+}
+
+.main_title {
+    margin-top: 0;
+    color:#123c69;
+    font-size: 2.5rem;
+}
+
+.container {
+    display:flex;
+    height: 100vh;
+}
+
+.sidebar {
+    margin-top: 0;
+    width: 150px;
+    background-color: #685b60;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 150vh;
+    box-sizing: border-box + 20px;
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.sidebar ul li a:hover {
+    background-color: #3b3437;
+}
+
+.content, .page-content {
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.links {
+    display: flex;
+}
+
+.button-home {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.button-page1 {
+    font-family: 'Comic Sans MS', cursive;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.page1 { background-color: #ac3b61; }
+.page1:hover { background-color: #c9567c;}
+.page2 { background-color: #123c69; }
+.page2:hover { background-color: #26588e;}
+
+.page1-border { border: 2px solid #ac3b61; }
+.page2-border { border: 2px solid #123c69; }
+
+.styled-textarea {
+    width: 50vw;
+    height: 30vh;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    outline: none;
+    resize: vertical;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.styled-textarea:hover, 
+.styled-textarea:focus {
+    border-color: #ac3b61;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.note-example {
+    background-color: #f8f2f0;
+    border: 1px solid #ddd1d4;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-family: 'Corier New', Courier, monospace;
+    color: #333;
+    font-weight: bold;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.upload-form {
+    width: 50vw;
+    height: 30vh;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.form-label {
+    font-size: 1.2em;
+}
+
+.file-input {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    background-color: white;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.result-block {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.result-title {
+    font-size: 1.8em;
+}
