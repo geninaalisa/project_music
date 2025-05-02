@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Распознаватель нот{% endblock %}
+
+{% block content %}
+<div>
+    <h2 class="main_title">Распознаватель нот</h2>
+</div>
+
+<div class="upload-section">
+    <form method="POST" action="/upload_audio" enctype="multipart/form-data" class="upload-form">
+        <label for="audio_file">Выберите аудиофайл (.wav, .mp3):</label><br><br>
+        <input type="file" id="audio_file" name="audio_file" accept=".wav,.mp3" required class="file-input"><br><br>
+        <button type="submit" class="button-page1 page1">Загрузить</button>
+    </form>
+</div>
+
+{% if note_result %}
+<div class="result-block">
+    <h3>Распознанная нота:</h3>
+    <div class="note-example">{{ note_result }}</div>
+</div>
+{% endif %}
+
+<div class="description">
+    <h3>Формат вывода нот</h3>
+    <p>Название ноты - это латинская буква от A до G</p>
+    <ul>
+        <li><span class="note-example">C</span> - До</li>
+        <li><span class="note-example">D</span> - Ре</li>
+        <li><span class="note-example">E</span> - Ми</li>
+        <li><span class="note-example">F</span> - Фа</li>
+        <li><span class="note-example">G</span> - Соль</li>
+        <li><span class="note-example">A</span> - Ля</li>
+        <li><span class="note-example">B</span> - Си</li>
+    </ul>
+    <p><span class="note-example">#</span> - это диез (повышение ноты на пол тона)</p>
+    <p>Октавы нот - это целые числа от 1 до 3 и от -1 до -3</p>
+    <ul>
+        <li><span class="note-example">3</span> - Третья октава</li>
+        <li><span class="note-example">2</span> - Вторая октава</li>
+        <li><span class="note-example">1</span> - Первая октава (стандартная)</li>
+        <li><span class="note-example">-1</span> - Малая октава</li>
+        <li><span class="note-example">-2</span> - Большая октава</li>
+        <li><span class="note-example">-3</span> - Контр октава</li>
+    </ul>
+</div>
+{% endblock %}

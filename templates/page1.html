@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Цифровой проигрыватель{% endblock %}
+
+{% block content %}
+<div>
+    <h2 class="main_title">Цифровой проигрыватель</h2>
+    <form action="{{ url_for('process_text') }}" method="POST">
+        <textarea class= "styled-textarea" name="notes_input"  placeholder="Ввод текста нот..."></textarea>
+        <button type="submit" class="button-page1 page1">Отправить</button>
+    </form>
+
+    {% if notes_input %}
+        <h3>Прослушать аудио: </h3>
+        <audio controls>
+            <source src="{{ url_for('static', filename='output.wav') }}" type="audio/wav">
+            Ваш браузер не поддерживает аудио.
+        </audio>
+
+        <h3>Вы ввели: </h3>
+        <p>{{notes_input}}</p>
+    {% endif %}
+    
+    <div class="description">
+        <h3>Как вводить мелодию?</h3>
+        <p>Следуйте формату, чтобы создать мелодию:</p>
+        <ul>
+            <li><strong>Нота и октава:</strong> Укажите название ноты 
+                <span class="note-example">C</span>, 
+                <span class="note-example">D</span>, 
+                <span class="note-example">E</span>, 
+                <span class="note-example">F</span>, 
+                <span class="note-example">G</span>, 
+                <span class="note-example">A</span>, 
+                <span class="note-example">B</span> 
+                и номер октавы (от <code>-3</code> до <code>3</code>). Пример: 
+                <span class="note-example">C1</span>, 
+                <span class="note-example">G#2</span>.
+            </li>
+            <li><strong>Длительность:</strong> Добавьте знак подчеркивания <code>_</code> и число. Пример: 
+                <span class="note-example">C1_1</span>.
+            </li>
+            <li><strong>Аккорды:</strong> Укажите ноты аккорда подряд без пробелов. Пример: 
+                <span class="note-example">C1E1G1_1</span>.
+            </li>
+            <li><strong>Разделение:</strong> Разделяйте ноты и аккорды пробелами. Пример: 
+                <span class="note-example">C1_1</span> 
+                <span class="note-example">E1_0.5</span> 
+                <span class="note-example">G1_1</span>.
+            </li>
+        </ul>
+        <h4>Пример:</h4>
+        <p><span class="note-example">C1_1</span> <span class="note-example">E1_0.5</span> <span class="note-example">G1_1</span> <span class="note-example">C1E1G1_1</span> <span class="note-example">D1F1A1_0.5</span></p>
+        <p>Этот пример создаст следующую последовательность:</p>
+        <ol>
+            <li>Нота <strong>до первой октавы</strong>, звучит 1 секунду.</li>
+            <li>Нота <strong>ми первой октавы</strong>, звучит 0.5 секунды.</li>
+            <li>Нота <strong>соль первой октавы</strong>, звучит 1 секунду.</li>
+            <li>Аккорд <strong>до-ми-соль</strong>, звучит 1 секунду.</li>
+            <li>Аккорд <strong>ре-фа-ля</strong>, звучит 0.5 секунды.</li>
+        </ol>
+        <p>Попробуйте создать свою мелодию прямо сейчас! 🎵</p>
+    </div>
+</div>
+{% endblock %}
